@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import TodoItem from './TodoItem';
 import './App.css';
 
 function App() {
@@ -6,11 +7,15 @@ function App() {
 
   return (
     <div className="App">
-      <div>Counter: { counter }</div>
+      <div>Counter: {counter}</div>
       <div>
         <button onClick={() => setCounter((c) => c - 1)}>-</button>
         <button onClick={() => setCounter((c) => c + 1)}>+</button>
       </div>
+
+      <TodoItem />
+      <TodoItem />
+      <TodoItem />
     </div>
   );
 }
